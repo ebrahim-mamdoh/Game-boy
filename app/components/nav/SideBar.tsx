@@ -1,0 +1,39 @@
+import React from "react";
+import { IoMdHome } from "react-icons/io";
+import { MdDashboard } from "react-icons/md";
+import { FaHeart } from "react-icons/fa";
+import { BsFillPeopleFill } from "react-icons/bs";
+import NavLink from "./NavLink";
+export const Nav_links = [
+  {
+    label: "Home",
+    link: "/",
+    icon: <IoMdHome />,
+  },
+  {
+    label: "Category",
+    link: "/category",
+    icon: <MdDashboard />,
+  },
+  {
+    label: "Wishlist",
+    link: "/wishlist",
+    icon: <FaHeart />,
+  },
+  {
+    label: "Friends",
+    link: "/friends",
+    icon: <BsFillPeopleFill />,
+  },
+];
+
+export default function SideBar() {
+ 
+  return (
+    <div className="col-span-2 flex flex-col gap-3">
+      {Nav_links.map((navLink, index) => (
+        <NavLink key={index} navlink={navLink} />
+      ))}
+    </div>
+  );
+}
