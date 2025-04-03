@@ -14,6 +14,10 @@ export const Nav_links = [
     label: "Category",
     link: "/category",
     icon: <MdDashboard />,
+  }, {
+    label: "Games",
+    link: "/games",
+    icon: <MdDashboard />,
   },
   {
     label: "Wishlist",

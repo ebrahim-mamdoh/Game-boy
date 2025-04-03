@@ -1,10 +1,10 @@
-import NavBar from "./components/nav/NavBar";
-import SideBar from "./components/nav/SideBar";
+import RootLayout from "./(grid)/layout";
 
 export default function Home() {
-  return(
-    <main>
-      <SideBar />
-    </main> 
+  return (
+    <RootLayout>
+      {/* هنا يمكنك إضافة محتوى الصفحة */}
+      <div>محتوى الصفحة الرئيسية هنا</div>
+    </RootLayout>
   );
 }
