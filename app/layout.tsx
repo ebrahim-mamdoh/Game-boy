@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}> 
-        <p className="font-semibold">Gaming website</p>
         {children}
       </body>
     </html>

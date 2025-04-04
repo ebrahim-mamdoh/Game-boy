@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import GridContainer from "../components/defaults/GridContainer";
 import SideBar from "../components/nav/SideBar";
+import NavBar from "../components/nav/NavBar";
+import MaxWidthWrapper from "../components/defaults/MaxWidthWrapper";
+import Hero from "../components/Hero";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "700"],
@@ -16,15 +19,18 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+
   return (
-    <main className="text-black grid h-screen">
+    <main className="background grid h-screen">
       <GridContainer cols={12}>
         {/* Sidebar */}
         <SideBar />
         {/* المحتوى الرئيسي */}
-        <div className="bg-gray-400 col-span-full lg:col-span-10 p-4">
+        <MaxWidthWrapper className=" col-span-full lg:col-span-10 p-4">
+          <NavBar/>
+          <Hero/>
           {children} {/* سيتم ملء المحتوى هنا */}
-        </div>
+        </MaxWidthWrapper>
       </GridContainer>
     </main>
   );

@@ -1,9 +1,12 @@
+import Hero from '@/app/components/Hero'
 import React from 'react'
 
-function page() {
+function Home() {
   return (
-    <div>page</div>
+    <main>
+    <Hero/>
+    </main>
   )
 }
 
-export default page
+export default Home
