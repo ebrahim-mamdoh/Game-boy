@@ -6,6 +6,7 @@ export default function NavBar() {
   return (<>
   <header className='flex justify-between items-center'>
 
+
   <Search/>
 
   <div className="flex gap-4 items-center justify-center h-full">
