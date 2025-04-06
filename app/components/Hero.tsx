@@ -5,7 +5,7 @@ import SwiperCard from './SwiperCard'
 export default function Hero() {
   return (<>
   <MaxWidthWrapper >
-    <SwiperCard/>
+    <SwiperCard paginationImages={[true]}  items={[{card:<div className='text-2xl font-bold '></div> ,src:'/bg2.jpg'}]}/>
   </MaxWidthWrapper>
   </>
   
