@@ -1,36 +1,42 @@
 'use client'
 
 import React from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Image from 'next/image'
 
-export default function SwiperCard ({
+export default function SwiperCard({
   items,
-  paginationImages
+  paginationImages,
+  className,
 }: {
-  items: { card: React.ReactNode; src: string }[]
-  paginationImages?: boolean[]
+  items: { card: React.ReactNode; src: string }[];
+  paginationImages?: boolean[];
+  className?: string;
 }) {
-
   return (
-    <>
-      <div className='flex flex-col gap-4 '>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={swiper => console.log(swiper)}
-        >
-          {items.map(({ card, src }, i) => (
-            <SwiperSlide key={i}>{card}</SwiperSlide>
-          ))}
-        </Swiper>
+    <div className='flex flex-col gap-4 w-full h-full'>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        className={`w-full ${className || 'h-96'}`}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {items.map(({ card }, i) => (
+          <SwiperSlide key={i}>
+            <div className="w-full h-full rounded-2xl overflow-hidden">
+              {card}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        {paginationImages &&
-          items.map(({ src }, i) => (
-            <div className='w-40 h-40 relative' key={i}>
+      {/* Pagination Thumbnails */}
+      {paginationImages && (
+        <div className='flex gap-4'>
+          {items.map(({ src }, i) => (
+            <div className='w-40 h-40 relative rounded-2xl overflow-hidden' key={i}>
               <Image
                 alt='image pagination'
                 src={src}
@@ -39,7 +45,8 @@ export default function SwiperCard ({
               />
             </div>
           ))}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   )
 }
