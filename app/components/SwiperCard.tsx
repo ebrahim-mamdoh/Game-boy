@@ -36,11 +36,12 @@ export default function SwiperCard({
       {paginationImages && (
         <div className='flex gap-4'>
           {items.map(({ src }, i) => (
-            <div className=' h-40 relative rounded-2xl max-w-lg w-full m overflow-hidden' key={i}>
+            <div className='cursor-pointer hover:-translate-y-5 hover:-shadow-md duration-200 opacity-90  z-4 h-40 relative rounded-2xl max-w-lg w-full m overflow-hidden' key={i}>
               <Image
                 alt='image pagination'
                 src={src}
                 fill
+              
                 className='object-cover'
               />
             </div>

@@ -21,9 +21,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 
   return (
-    <main className="background grid h-screen">
+    <main className="background grid min-h-screen h-full">
       <GridContainer cols={12}>
-        {/* Sidebar */}
+  
         <SideBar />
         {/* المحتوى الرئيسي */}
         <MaxWidthWrapper className=" col-span-full lg:col-span-10 p-4">

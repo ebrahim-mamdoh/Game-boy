@@ -1,6 +1,7 @@
 import React from 'react'
 import MaxWidthWrapper from './defaults/MaxWidthWrapper'
 import SwiperCard from './SwiperCard'
+import Image from 'next/image'
 
 export default function Hero () {
   return (
@@ -45,20 +46,17 @@ export default function Hero () {
           },
           {
             card: (
-              <section className='relative rounded-2xl overflow-hidden h-full w-full'>
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className='object-top w-full h-full object-cover rounded-2xl'
-                >
-                  <source src={'/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp'} type='video/mp4' />
-                  Your browser does not support the video tag.
-                </video>
-              </section>
+              <div className=" w-full h-full relative">
+                <Image
+                  src="/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp"
+                  alt="Dragon Ball Sparking Zero Hero desktop 01 03oct24"
+                  className=" w-full h-full object-cover object-top rounded-2xl  inset-0"
+                  fill
+                />
+                
+              </div>
             ),
-            src: '/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp'
+            src: "/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp",
           },
           {
             card: (
