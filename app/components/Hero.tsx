@@ -2,6 +2,7 @@ import React from 'react'
 import MaxWidthWrapper from './defaults/MaxWidthWrapper'
 import SwiperCard from './SwiperCard'
 import Image from 'next/image'
+import CardInfo from './CardInfo'
 
 export default function Hero () {
   return (
@@ -12,7 +13,7 @@ export default function Hero () {
         items={[
           {
             card: (
-              <section className='relative rounded-2xl overflow-hidden h-full w-full'>
+              <div className='relative rounded-2xl overflow-hidden h-full w-full'>
                 <video
                   autoPlay
                   muted
@@ -23,13 +24,19 @@ export default function Hero () {
                   <source src={'/spidervideo.mp4'} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
-              </section>
+                <CardInfo
+                  btnClasses=" text-white bg-red-500 hover:bg-red-400"
+                  desc="Peter Parker & Miles Morales return for an exciting new adventure in the acclaimed Marvel’s Spider-Man franchise, out October 20 for PS5."
+                  title="BE GREATER TOGETHER"
+                  image="/news1title.webp"
+                />
+              </div>
             ),
             src: '/poster.webp'
           },
           {
             card: (
-              <section className='relative rounded-2xl overflow-hidden h-full w-full'>
+              <div className='relative rounded-2xl overflow-hidden h-full w-full'>
                 <video
                   autoPlay
                   muted
@@ -40,7 +47,13 @@ export default function Hero () {
                   <source src={'/call-of-duty-black-ops-6-animated-hero-mobile-01-en-22may24.mp4'} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
-              </section>
+                <CardInfo
+                  btnClasses="  text-white bg-orange-500 hover:bg-orange-400"
+                  desc="Last chance to pre-order and get access to additional premium content. Call of Duty®: Black Ops 6 launches on October 25th"
+                  title="The truth lies"
+                  image="/call-of-duty-black-ops-6-logo-01-en-21may24.webp"
+                />
+              </div>
             ),
             src: '/call-of-duty-black-ops-6-hero-desktop-01-en-21may24.webp'
           },
@@ -60,7 +73,7 @@ export default function Hero () {
           },
           {
             card: (
-              <section className='relative rounded-2xl overflow-hidden h-full w-full'>
+              <div className='relative rounded-2xl overflow-hidden h-full w-full'>
                 <video
                   autoPlay
                   muted
@@ -71,7 +84,7 @@ export default function Hero () {
                   <source src={'/cyberpunk-2077-phantom-liberty-video-hero-01-en-11sep23.mp4'} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
-              </section>
+              </div>
             ),
             src: '/cyb.webp'
           },
