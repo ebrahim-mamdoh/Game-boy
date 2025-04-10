@@ -66,7 +66,12 @@ export default function Hero () {
                   className=" w-full h-full object-cover object-top rounded-2xl  inset-0"
                   fill
                 />
-                
+                  <CardInfo
+                  btnClasses=" text-white bg-red-500 hover:bg-red-400"
+                  desc="A legendary series has returned. Reach new levels of power in Dragon Ball: Sparking! Zero, out now on PS5"
+                  title="Shake the earth. Break the universe !"
+                  image="/Dragon-Ball-Sparking-Zero-logo-01-03oct24.webp"
+                />
               </div>
             ),
             src: "/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp",
@@ -84,6 +89,12 @@ export default function Hero () {
                   <source src={'/cyberpunk-2077-phantom-liberty-video-hero-01-en-11sep23.mp4'} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
+                <CardInfo
+                  btnClasses=" text-white z-20 bg-red-500 hover:bg-red-400"
+                  desc="As cyber-enhanced mercenary V, join secret agent Solomon Reed to unravel a web of sinister political machinations."
+                  title="Freedom Always Comes At A Price…"
+                  image="/iconcyber.webp"
+                />
               </div>
             ),
             src: '/cyb.webp'
