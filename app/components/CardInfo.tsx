@@ -23,7 +23,7 @@ const CardInfo = ({
       className=" flex flex-col items-start absolute left-20 top-20 max-w-md"
     >
       <div className=" w-96 h-40 relative">
-        <Image src={image} fill alt={`${title}`} className=" object-contain" />
+        <Image src={image} fill alt={`${title}`} className=" object-contain"    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
       </div>
       <h1 className=" text-white text-2xl font-semibold ">{title}</h1>
       <p className=" text-base  text-gray-200">{desc}</p>

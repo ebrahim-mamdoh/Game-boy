@@ -21,14 +21,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 
   return (
+
     <main className="background grid min-h-screen h-full">
-      <GridContainer cols={12}>
-  
+      <GridContainer cols={12}>  
         <SideBar />
         {/* المحتوى الرئيسي */}
         <MaxWidthWrapper className=" col-span-full lg:col-span-10 p-4">
           <NavBar/>
-          <Hero/>
           {children} {/* سيتم ملء المحتوى هنا */}
         </MaxWidthWrapper>
       </GridContainer>

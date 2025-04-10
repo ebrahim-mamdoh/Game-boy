@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
+'use client'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const MotionItem = ({
   children,
@@ -8,14 +8,14 @@ const MotionItem = ({
   initial,
   animate,
   whileInView,
-  exit,
+  exit
 }: {
-  children: React.ReactNode;
-  className?: string;
-  initial?: any;
-  animate?: any;
-  whileInView?: any;
-  exit?: any;
+  children: React.ReactNode
+  className?: string
+  initial?: any
+  animate?: any
+  whileInView?: any
+  exit?: any
 }) => {
   return (
     <motion.div
@@ -23,11 +23,11 @@ const MotionItem = ({
       exit={exit}
       animate={animate}
       whileInView={whileInView}
-      className={`${className || ""}`}
+      className={`${className || ''}`}
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}
 
-export default MotionItem;
+export default MotionItem

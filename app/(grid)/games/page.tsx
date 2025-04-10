@@ -1,11 +1,16 @@
 import Hero from '@/app/components/Hero'
 import React from 'react'
+// this is server component i feact the data from API here
 
-function Home() {
-  return (
+
+async function Home() {
+
+ 
+  return (<>
     <main>
-    <Hero/>
+    <h2>Gaming</h2>
     </main>
+  </>
   )
 }
 
