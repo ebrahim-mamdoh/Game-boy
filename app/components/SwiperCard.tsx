@@ -12,10 +12,11 @@ export default function SwiperCard({
   paginationImages,
   className,
 }:{
-  
+
   items: { card: React.ReactNode; src: string }[];
   paginationImages?: boolean[];
   className?: string;
+  
 }) {
   const [swiper ,setSwiper]= useState<SwiperType | null>(null)
   useEffect(() => {}, [swiper])
