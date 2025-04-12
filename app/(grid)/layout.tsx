@@ -16,9 +16,7 @@ export const metadata: Metadata = {
   description: "A blog about gaming",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children,}: Readonly<{ children: React.ReactNode }>) {
 
   return (
 

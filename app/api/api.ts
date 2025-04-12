@@ -1,4 +1,4 @@
-import { APIURL, KEY } from "@/app/constants/index";
+import { APIURL, KEY } from "@/app/constants";
 const fetchFn = (url: string, cache?: number) =>
   fetch(url, { next: { revalidate: cache || 3600 } }).then((res) => res.json());
 export const searchGames = async function (

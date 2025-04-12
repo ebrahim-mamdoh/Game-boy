@@ -10,12 +10,13 @@ import { Autoplay } from 'swiper/modules'
 export default function SwiperCard({
   items,
   paginationImages,
-  className,
+  className,slidesPerView
 }:{
 
   items: { card: React.ReactNode; src: string }[];
   paginationImages?: boolean[];
   className?: string;
+  slidesPerView?: number;
   
 }) {
   const [swiper ,setSwiper]= useState<SwiperType | null>(null)
@@ -48,8 +49,8 @@ useEffect(() => {
       <Swiper
       autoplay={{delay: 3000}}
       modules={[Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={20}
+        slidesPerView={slidesPerView || 1}
         className={`w-full ${className || 'h-96'}`}
         // onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) =>setSwiper(swiper)}
