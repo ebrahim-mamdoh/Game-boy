@@ -51,24 +51,20 @@ const GamesSlider = ({
                 </div>
               ) : (
                 <div className=" relative cursor-pointer group">
-                  <div
-                    className="  after:absolute after:inset-0 
-                 after:w-0 group-hover:after:w-full after:h-full after:bg-rose-500/60 after:rounded-2xl after:duration-200  w-full h-96 rounded-2xl overflow-hidden relative "
-                  >
-                    <Image
-                      className=" group-hover:scale-125 group-hover:rotate-6 duration-200 object-cover"
-                      fill
-                      src={game.background_image}
-                      alt={game.name}
-                    />
-                  </div>
-                  
-                  <Link href={`/game/${game.id}`} className=" text-base line-clamp-1 mt-2 text-white font-semibold ">
-                    {game.name}
+                  <Link href={`/game/${game.id}`}>
+                    <div
+                      className="  after:absolute after:inset-0 
+                     after:w-0 group-hover:after:w-full after:h-full after:bg-rose-500/60 after:rounded-2xl after:duration-200  w-full h-96 rounded-2xl overflow-hidden relative "
+                    >
+                      <Image
+                        className=" group-hover:scale-125 group-hover:rotate-6 duration-200 object-cover"
+                        fill
+                        src={game.background_image}
+                        alt={game.name}
+                      />
+                    </div>
                   </Link>
-                  {/* <div className=" absolute top-2 left-4">
-                    <AddToWishList plus gameId={game.id.toString()} />
-                  </div> */}
+                  <p className=" text-base line-clamp-1 mt-2 text-white font-semibold ">{game.name}</p>
                 </div>
               ),
             };
